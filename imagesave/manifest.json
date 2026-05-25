@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Save Largest Image",
+  "version": "1.2.9",
+  "description": "Saves the largest image on a page with a keyboard shortcut",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "downloads",
+    "downloads.open",
+    "scripting",
+    "declarativeContent"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    // "save-largest-image": {
+    "_execute_action": {
+      "description": "Save largest image",
+      "name": "saveImage",
+      "suggested_key": {
+        "default": "Ctrl+Shift+S", // Customize as desired
+        "mac": "Command+Shift+S"
+      }
+    }
+  },
+    "author": "landenlabs@gmail.com",
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "action": {},
+    "options_page": "options.html"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="options.css" />
+      <title>Download Largest Image</title>
+  </head>
+  <body>
+    <h2>Options for Download Largest Image extension</h2>
+
+    <h3>Save If:</h3>
+    <div style="padding-left: 20px"> 
+        <label for="image_min_width">Min Width:</label>
+        <input type="text" id="image_min_width" value="400"  size="10" > 
+        <label for="image_max_width">Max Width:</label>
+        <input type="text" id="image_max_width" value="any" size="10" > 
+        <br>
+        <label for="image_min_height">Min Height:</label>
+        <input type="text" id="image_min_height" value="400" size="10" > 
+        <label for="image_max_height">Max Height:</label>
+        <input type="text" id="image_max_height" value="any" size="10" > 
+    </div>
+
+      
+    <h3>Save As:</h3>
+    <div style="padding-left: 20px"> 
+        <li>{host} = website host name</li> 
+        <li>{title} = website title</li>
+        <li>{name} = image file name</li>
+        <li>{####} = increase number, #=how many digits, ##=10..99 ###=100..999 </li>
+        <p>
+        
+        <label for="save_fmt">Save as:</label>
+        <input type="text" id="save_fmt"   size="60" value="{name}_{####}" > 
+        
+        <br> 
+        <label for="save_from">&nbsp;&nbsp;#From:</label>
+        <input type="text" id="save_from"  value="1000" size="10"> 
+        <label for="save_to">&nbsp;&nbsp;&nbsp;#To:</label>
+        <input type="text" id="save_to" value="2000" size="10"> 
+        <label for="save_step">&nbsp;&nbsp;&nbsp;#Step:</label>
+        <input type="text" id="save_step" value="1" size="4"> 
+    </div>
+
+
+    <h3>After success download, open popup:</h3>
+    <div style="padding-left: 20px"> 
+        <input type="radio" id="open_never" name="popup" >
+        <label for="open_never">Never</label><br>
+        <input type="radio" id="open_normal" name="popup" >
+        <label for="open_normal">Normal dialog</label><br>
+        <input type="radio" id="tap_close" name="popup" >
+        <label for="tap_close">Close on tap</label><br>
+        <input type="radio" id="auto_close" name="popup" >
+        <label for="auto_close">Automatically close after 3 seconds</label>
+    </div>
+      
+    <script src="options.js"></script>
+  </body>
+</html>
