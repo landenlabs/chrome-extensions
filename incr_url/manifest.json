@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Incrementor",
+  "version": "1.3.5",
+  "description": "Increment last number in URL",
+  "icons": {
+    "128": "images/plus.png"
+  },
+  "options_page": "options.html",
+  "page_action": {
+    "default_icon": "images/plus.png",
+    "default_title": "Increment last number in URL"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["javascripts/jquery.js", "javascripts/inject.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["javascripts/background.js"],
+    "persistent": false
+  }
+}
